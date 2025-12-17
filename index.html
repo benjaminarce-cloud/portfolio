@@ -2,77 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Benjamin Arce – Portfolio</title>
+  <title>Benjamin Arce – Industrial & Process Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="shell">
-      <div class="brand-block">
-        <h1 class="site-title">Benjamin Arce</h1>
-        <p class="site-subtitle">
-          Industrial Engineering student working on logistics, data systems, and economic research.
-        </p>
-      </div>
-
-      <nav class="main-nav">
-        <a href="#projects">Projects</a>
-        <a href="#investigation">Investigation</a>
-        <a href="#now">Now</a>
-        <a href="#misc">Misc</a>
-        <a href="#about">About</a>
-        <!-- update these two links -->
-        <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- hero / intro -->
-    <section class="hero">
-      <div class="shell">
-        <div class="hero-main">
-          <h2>Systems over aesthetics.</h2>
-          <p>
-            This site is mostly a log of what I actually build: supply chain and logistics work,
-            data-heavy projects, and a longer investigation that sits somewhere between economics and
-            engineering. The design is here to stay out of the way.
+  <div class="layout">
+    <!-- Sticky sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <header class="identity">
+          <h1 class="name">Benjamin Arce</h1>
+          <p class="role">
+            Industrial &amp; Process Engineering student
           </p>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-chip">Remote logistics analyst</div>
-          <div class="hero-chip">Final-year Industrial Engineering</div>
-          <div class="hero-chip">MIT-level prep (long game)</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- projects -->
-    <section id="projects" class="section">
-      <div class="shell">
-        <header class="section-head">
-          <h2>Selected Projects</h2>
-          <p class="section-intro">
-            A small set of projects that solve real problems. Everything here either ships, runs on data,
-            or both.
+          <p class="focus">
+            Logistics, data systems, and economic / supply chain investigation.
           </p>
         </header>
 
-        <div class="grid">
+        <nav class="nav">
+          <a href="#intro">Intro</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process engineering</a>
+          <a href="#investigation">Investigation</a>
+          <a href="#now">Now</a>
+          <a href="#misc">Misc</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="sidebar-meta">
+          <div class="pill">Remote logistics analyst</div>
+          <div class="pill">Final-year Industrial Engineering</div>
+          <div class="pill">Process + data mindset</div>
+        </div>
+
+        <footer class="sidebar-footer">
+          <p>
+            <a href="mailto:youremail@example.com">youremail@example.com</a><br />
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
+            <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+          </p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- Main scrollable content -->
+    <main class="content">
+      <!-- Intro / hero -->
+      <section id="intro" class="section section-intro">
+        <header class="section-label">Intro</header>
+        <div class="section-body">
+          <h2>I design and improve systems, not just slides.</h2>
+          <p>
+            Right now that means: logistics flows, manufacturing costs, and data pipelines that tie
+            operations to real decisions. This page is a snapshot of that work: a couple of serious
+            projects, an ongoing investigation, and a log of what I’m training on.
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <header class="section-label">Projects</header>
+        <div class="section-heading">
+          <h2>Selected projects</h2>
+          <p>
+            A focused set of projects where I used process thinking + data to solve real problems.
+          </p>
+        </div>
+
+        <div class="cards-grid">
           <article class="card">
-            <h3>Manufacturing Cost Intelligence System</h3>
-            <p class="card-tagline">Margin forecasting and what-if analysis for manufacturing lines.</p>
+            <div class="card-head">
+              <span class="card-index">01</span>
+              <h3>Manufacturing Cost Intelligence System</h3>
+            </div>
+            <p class="card-tagline">
+              Margin forecasting and what-if analysis for manufacturing lines.
+            </p>
             <ul class="card-list">
               <li><strong>Problem:</strong> Operations needed a way to compare scenarios under changing
-                energy, labor, and material costs without guessing on margins.</li>
+                energy, labor, and material costs without relying on gut feel.</li>
               <li><strong>What I built:</strong> A model that ingests cost drivers and demand assumptions,
-                runs scenarios, and outputs projected margins and risk bands.</li>
-              <li><strong>Stack:</strong> Python, pandas, basic simulation logic, Excel / Power BI for the
-                front-end.</li>
-              <li><strong>Outcome:</strong> Makes it obvious how margin shifts when one cost driver moves,
-                instead of burying assumptions in spreadsheets.</li>
+                runs scenarios, and outputs projected margins and sensitivity.</li>
+              <li><strong>Stack:</strong> Python, pandas, simulation logic, Excel / BI front-end.</li>
+              <li><strong>Impact:</strong> Makes it obvious how margin shifts when one driver moves,
+                instead of hiding assumptions in spreadsheets.</li>
             </ul>
             <p class="card-links">
               <a href="https://github.com/YOUR-USERNAME/YOUR-COST-PROJECT" target="_blank" rel="noopener noreferrer">
@@ -82,15 +99,20 @@
           </article>
 
           <article class="card">
-            <h3>Logistics / Route & Inventory Analysis</h3>
-            <p class="card-tagline">Data view on routes, inventory levels, and transportation costs.</p>
+            <div class="card-head">
+              <span class="card-index">02</span>
+              <h3>Logistics Route & Inventory Analysis</h3>
+            </div>
+            <p class="card-tagline">
+              Data view on routes, inventory levels, and transportation cost trade-offs.
+            </p>
             <ul class="card-list">
-              <li><strong>Problem:</strong> Fragmented view of stock across locations and carriers made it
-                hard to see where money and time were actually being burned.</li>
-              <li><strong>What I built:</strong> Data model and dashboards that tie inventory, routes, and
-                service levels into one picture.</li>
-              <li><strong>Stack:</strong> Python, SQL, spreadsheets / BI tooling used at work.</li>
-              <li><strong>Outcome:</strong> Faster answers to “where is the bottleneck?” and “what happens
+              <li><strong>Problem:</strong> Fragmented view of stock and lanes made it hard to see where
+                money and time were actually being burned.</li>
+              <li><strong>What I built:</strong> A consolidated data model and dashboards tying inventory,
+                routes, and service levels into one picture.</li>
+              <li><strong>Stack:</strong> Python, SQL, company BI tooling.</li>
+              <li><strong>Impact:</strong> Faster answers to “where is the bottleneck?” and “what happens
                 if we change this lane or policy?”.</li>
             </ul>
             <p class="card-links">
@@ -99,154 +121,203 @@
               </a>
             </p>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- investigation -->
-    <section id="investigation" class="section section-alt">
-      <div class="shell">
-        <header class="section-head">
-          <h2>Investigation</h2>
-          <p class="section-intro">
-            The long-horizon project. Slow, sometimes painful, but meant to be the foundation of the story I
-            take to grad school.
+          <article class="card">
+            <div class="card-head">
+              <span class="card-index">03</span>
+              <h3>Econ / Table Extraction Pilot</h3>
+            </div>
+            <p class="card-tagline">
+              Turning messy academic tables into structured data for modeling.
+            </p>
+            <ul class="card-list">
+              <li><strong>Problem:</strong> Economics papers lock important results in PDFs and weird
+                tables, making systematic analysis almost impossible.</li>
+              <li><strong>What I built:</strong> A pipeline that parses tables, classifies fields, and
+                extracts usable moments for downstream models.</li>
+              <li><strong>Stack:</strong> Python, regex, LLMs, lots of edge-case handling.</li>
+              <li><strong>Goal:</strong> Build a dataset that can actually support serious empirical work,
+                not just screenshots in slides.</li>
+            </ul>
+            <p class="card-links">
+              <a href="https://github.com/YOUR-USERNAME/econ-table-project" target="_blank" rel="noopener noreferrer">
+                View details
+              </a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Process engineering -->
+      <section id="process" class="section">
+        <header class="section-label">Process engineering</header>
+        <div class="section-heading">
+          <h2>How I think about processes</h2>
+          <p>
+            The short version: map the flow, instrument it, then design the smallest system that actually
+            changes behavior.
           </p>
-        </header>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <h3>01 · Map</h3>
+            <p>
+              Start with the real flow: materials, information, decisions. Swimlanes, hand-offs,
+              constraints. No buzzwords, just “what actually happens?”.
+            </p>
+          </article>
+          <article class="process-step">
+            <h3>02 · Measure</h3>
+            <p>
+              Pick a few metrics that matter (lead time, service level, margin, failure rate) and wire
+              data around them. If we can’t measure it, we can’t argue about it properly.
+            </p>
+          </article>
+          <article class="process-step">
+            <h3>03 · Model</h3>
+            <p>
+              Use models to explore scenarios and trade-offs: routing choices, inventory policies,
+              production plans. The goal is insight, not a black box.
+            </p>
+          </article>
+          <article class="process-step">
+            <h3>04 · Iterate</h3>
+            <p>
+              Push small changes back into the process, monitor impact, and refine. This is where the
+              engineering mindset meets day-to-day operations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Investigation -->
+      <section id="investigation" class="section section-alt">
+        <header class="section-label">Investigation</header>
+        <div class="section-heading">
+          <h2>Long-horizon investigation</h2>
+          <p>
+            The “slow burn” project: connecting supply chain decisions, uncertainty, and economic outcomes
+            in a way that could stand up in a grad-level environment.
+          </p>
+        </div>
 
         <article class="card">
-          <h3>Title of your investigation</h3>
+          <h3>Working title – fill this in later</h3>
           <p class="card-tagline">
-            One sentence on what the investigation is about (e.g. linking supply chain decisions,
-            uncertainty, and risk/decabonization).
+            One sentence on what you’re really trying to understand here.
           </p>
           <ul class="card-list">
-            <li><strong>Question:</strong> What is the actual research question you are trying to answer?</li>
-            <li><strong>Data:</strong> Type and sources of data (real or simulated).</li>
+            <li><strong>Question:</strong> State the core research question you’re aiming at.</li>
+            <li><strong>Data:</strong> Types and sources (real operational data, simulations, public
+              datasets, etc.).</li>
             <li><strong>Methods:</strong> For example: matrix completion, simulation–optimization,
-              drift detection, Monte Carlo, etc.</li>
-            <li><strong>So far:</strong> What exists today (pipelines, baselines, partial results).</li>
-            <li><strong>Next:</strong> The next concrete step you are taking, not a vague dream.</li>
+              Monte Carlo, drift detection, etc.</li>
+            <li><strong>So far:</strong> What you’ve already built or run (pipelines, baselines, first
+              experiments).</li>
+            <li><strong>Next:</strong> The next concrete step, not the final dream outcome.</li>
           </ul>
-          <!-- Optional link to PDF / doc -->
-          <!-- <p class="card-links">
-            <a href="investigation.pdf" target="_blank" rel="noopener noreferrer">Working draft</a>
-          </p> -->
         </article>
-      </div>
-    </section>
+      </section>
 
-    <!-- Now -->
-    <section id="now" class="section">
-      <div class="shell">
-        <header class="section-head">
-          <h2>Now / Learning Log</h2>
-          <p class="section-intro">
-            Not a “blog”. More like a training log for the non-gym part of life. Short notes, no polish.
+      <!-- Now / log -->
+      <section id="now" class="section">
+        <header class="section-label">Now</header>
+        <div class="section-heading">
+          <h2>Now / learning log</h2>
+          <p>
+            Not a blog. Just a running log of what I’m training on – the off-court practice.
           </p>
-        </header>
+        </div>
 
         <ul class="timeline">
           <li class="timeline-item">
             <div class="timeline-date">Dec 2025</div>
             <div class="timeline-body">
-              Dialing in a pipeline to turn ugly economics tables into structured data. Feels a lot like
-              sports practice: repetitive drills, small tweaks, delayed payoff.
+              Tightening a pipeline to turn messy economics tables into structured data. Very similar
+              feeling to sports practice: repeat the same drill until it stops being interesting.
             </div>
           </li>
           <li class="timeline-item">
             <div class="timeline-date">Nov 2025</div>
             <div class="timeline-body">
-              Balancing a remote logistics analyst role with constructing a portfolio that actually makes
-              sense for MIT-level supply chain and data work.
+              Balancing a remote logistics analyst role with building a coherent story around process
+              engineering, data, and grad-school-level work.
             </div>
           </li>
           <li class="timeline-item">
             <div class="timeline-date">Earlier</div>
             <div class="timeline-body">
-              I’ll keep adding small entries here instead of pretending to be a full-time writer.
+              I’ll keep adding short entries here over time. No need for 1,500-word posts.
             </div>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Misc / personality -->
-    <section id="misc" class="section section-alt">
-      <div class="shell">
-        <header class="section-head">
-          <h2>Misc</h2>
-          <p class="section-intro">
-            Side quests, dumb stats, and things that don’t quite belong in a serious portfolio but still say
-            something about how I work.
+      <!-- Misc -->
+      <section id="misc" class="section section-alt">
+        <header class="section-label">Misc</header>
+        <div class="section-heading">
+          <h2>Side quests</h2>
+          <p>
+            Stuff that doesn’t fit the formal story but still says something about how I operate.
           </p>
-        </header>
+        </div>
 
-        <div class="grid">
+        <div class="cards-grid">
           <article class="card">
-            <h3>Unhelpful Metrics</h3>
+            <h3>Unhelpful metrics</h3>
             <ul class="card-list">
-              <li>Times I finished second in something important: <strong>plenty</strong>.</li>
-              <li>Times I told myself “this bug will be a quick fix” and it was: <strong>0</strong>.</li>
-              <li>Number of dashboards I built that only I will ever fully understand: <strong>unknown</strong>.</li>
+              <li>Times I finished second in something important: <strong>many</strong>.</li>
+              <li>Times a “quick bug fix” was actually quick: <strong>0</strong>.</li>
+              <li>Number of dashboards nobody will fully understand except me: <strong>uncounted</strong>.</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Kitchen Energy</h3>
+            <h3>Kitchen energy</h3>
             <p class="card-tagline">
-              The Bear, but it’s Jupyter notebooks and logistics data instead of food.
+              The Bear, but with Jupyter, route tables, and PDF economics papers instead of food.
             </p>
             <p>
-              Imagine a still from a chaotic kitchen here. That’s the internal mood for most projects. The
-              rest of this site is the cleaned-up version, after the plates stop flying.
+              Imagine a still from a chaotic kitchen here. That’s the internal mood for most projects.
+              This page is the version after everything has been labeled, cleaned, and put back where it
+              belongs.
             </p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="shell">
-        <header class="section-head">
-          <h2>About</h2>
-          <p class="section-intro">
-            Short version of how I ended up caring this much about logistics, data, and getting out of the
-            “okay at everything” zone.
+      <!-- About -->
+      <section id="about" class="section">
+        <header class="section-label">About</header>
+        <div class="section-heading">
+          <h2>Short version</h2>
+          <p>
+            How I went from “okay at everything” to taking process and systems seriously.
           </p>
-        </header>
+        </div>
 
         <div class="about-body">
           <p>
-            I’m a final-year Industrial Engineering student from Mexicali, currently working as a remote
-            logistics analyst and building data-heavy projects around supply chains and economics.
+            I’m a final-year Industrial Engineering student from Mexicali, working as a remote logistics
+            analyst and building projects at the intersection of process engineering, data systems, and
+            economics.
           </p>
           <p>
-            I grew up as the younger brother following a very strong act – same school, same sports, same
-            cities. For a long time I was “good enough” at everything, but never the one people pointed to.
-            Over the last couple of years, that changed: I started doing real work in logistics, building
-            systems around data instead of just using tools, and aiming for places that used to feel out of
-            reach.
+            I grew up as the younger brother following a very strong act – same school, same sports,
+            same cities. For a long time I was good at a lot of things but never really owned one.
+            Over the last couple of years, that changed: I started doing real work in logistics,
+            building systems around data instead of just using tools, and aiming for places that used
+            to feel out of reach.
           </p>
           <p>
-            This site is mostly a record of that shift: what I build, the questions I’m chasing, and what
-            I’m currently learning.
-          </p>
-          <p>
-            Contact:
-            <a href="arceb3013@gmail.com">arceb3013@gmail.com</a> ·
-            <a href="www.linkedin.com/in/arcebenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            This page is a record of that shift: the processes, projects, and questions I’m using to
+            get there.
           </p>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell">
-      <small>Built with plain HTML/CSS and a growing list of TODOs.</small>
-    </div>
-  </footer>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
